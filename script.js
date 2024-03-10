@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let stringifiedTodoList = localStorage.getItem("todoList");
         let parsedTodoList = JSON.parse(stringifiedTodoList);
         if (parsedTodoList === null) {
-            return [];
+            return []; 
         } else {
             return parsedTodoList;
         }

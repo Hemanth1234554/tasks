@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Ojuju:wght@200..800&family=Quicksand:wght@300..700&display=swap');
 
 /* General Styles */
 .backgroundcontainer {
@@ -13,6 +14,7 @@
     font-size: 7vh;
     font-weight: lighter;
     margin-top: 6vh;
+    margin-bottom: 40px;
 }
 
 .firsthead,
@@ -42,6 +44,7 @@
     font-size: 20px;
     font-weight: bolder;
     color: black;
+    font-family: "Quicksand", sans-serif;
 }
 
 /* Input Placeholder Styles */
@@ -110,7 +113,7 @@
     /* Ensure items are displayed as flex to enable alignment */
     justify-content: flex-start;
     /* Align task box to the left */
-    background-color: #a0d7de;
+    background-color: #e1e1e1;
     /* Background color of the task box */
     border: 2px solid #333;
     /* Border of the task box */
@@ -120,6 +123,7 @@
     /* Smooth transition for hover effect */
     padding: 15px 0px 15px 20px;
     /* Padding within the task box */
+    font-family: "Quicksand", sans-serif;
 }
 
 /* .task-box:hover {
@@ -182,30 +186,67 @@
 
 
 /* For screens smaller than 768px (typical smartphones) */
+/* For screens smaller than 768px (typical smartphones) */
+/* For screens smaller than 768px (typical smartphones) */
 @media only screen and (max-width: 768px) {
+    .backgroundcontainer {
+        padding: 10px;
+        /* Adjust padding for better spacing on mobile */
+    }
+
+    .container {
+        max-width: 100%;
+        /* Ensure container occupies full width on mobile */
+        padding: 10px;
+        /* Adjust padding for better spacing on mobile */
+    }
+
     .mainhead {
-        font-size: 5vh;
-        /* Adjust the font size for smaller screens */
+        font-size: 4.5vh;
         margin-top: 3vh;
-        /* Adjust the margin for smaller screens */
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .firsthead,
     .taskhead {
         font-size: 4vh;
-        /* Adjust the font size for smaller screens */
+        /* Decrease font size for subheadings */
     }
 
     .user-input {
         font-size: 16px;
-        /* Adjust input font size for smaller screens */
+        /* Adjust input font size for better readability */
+        width: calc(100% - 20px);
+        /* Adjust input width for better fit */
+        padding: 10px;
+        /* Adjust input padding for better touch interaction */
     }
 
     .button,
     .save {
-        font-size: 16px;
-        /* Adjust button font size for smaller screens */
-        padding: 8px 16px;
-        /* Adjust button padding for smaller screens */
+        font-size: 14px;
+        /* Decrease button font size for mobile */
+        padding: 10px 16px;
+        /* Adjust button padding for better touch interaction */
+    }
+
+    .task-box {
+        padding: 10px;
+        /* Adjust padding for task boxes on mobile */
+    }
+
+    .task-name {
+        font-size: 18px;
+        /* Adjust task name font size for better readability */
+        margin-right: 5px;
+        /* Adjust margin for task names */
+    }
+
+    .delete-icon {
+        font-size: 24px;
+        /* Increase delete icon size for better visibility */
+        margin-left: 5px;
+        /* Adjust margin for delete icons */
     }
 }
