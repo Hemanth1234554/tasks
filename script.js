@@ -153,3 +153,5 @@ document.addEventListener('DOMContentLoaded', function () {
         selectedTasks = []; // Clear the selected tasks array after deletion
     };
 });
+
+

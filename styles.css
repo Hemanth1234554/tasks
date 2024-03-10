@@ -5,6 +5,8 @@
 .backgroundcontainer {
     background-color: white;
     padding: 20px;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 
 /* Headings */
@@ -40,7 +42,7 @@
     width: calc(100% - 50px);
     border: 0.5px solid black;
     border-radius: 10px;
-    padding: 20px 0px 20px 20px;
+    padding: 25px 0px 25px 20px;
     font-size: 20px;
     font-weight: bolder;
     color: black;
@@ -52,6 +54,8 @@
     color: #666;
     font-size: 20px;
 }
+
+
 
 /* Button Styles */
 .button,
@@ -249,4 +253,22 @@
         margin-left: 5px;
         /* Adjust margin for delete icons */
     }
+}
+
+/* Add styling for the delete selected button */
+.delete-selected-button {
+    font-size: 14px;
+    padding: 10px 16px;
+    background-color: #ff5252;
+    /* Red color for delete button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.delete-selected-button:hover {
+    background-color: #ff1744;
+    /* Darker red color on hover */
 }
