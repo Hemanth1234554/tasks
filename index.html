@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Edition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="backgroundcontainer">
+        <div class="container">
+            <div class="col">
+                <h1 class="mainhead">Add the Task</h1>
+                <h1 class="firsthead">Add<span class="firsthead-sub"> Task</span></h1>
+                <div class="input-container">
+                    <input type="text" class="user-input" placeholder="Name the task..">
+                    <!-- Added an input container for styling -->
+                </div>
+                <button class="button" id="addTodoButton">Add</button>
+                <!-- Renamed id to "addTodoButton" for JavaScript reference -->
+                <h1 class="taskhead">My <span class="taskheadsub">Tasks</span></h1>
+                <ul class="task-container" id="todoItemsContainer"></ul>
+                <!-- Renamed id to "todoItemsContainer" for JavaScript reference -->
+                <button class="save" id="saveTodoButton">Save</button>
+                <!-- Renamed id to "saveTodoButton" for JavaScript reference -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <!-- Corrected the type of the script tag -->
+</body>
+
+</html>

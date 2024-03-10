@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+/* General Styles */
+.backgroundcontainer {
+    background-color: white;
+    padding: 20px;
+}
+
+/* Headings */
+.mainhead {
+    text-align: center;
+    font-family: "Madimi One", sans-serif;
+    font-size: 7vh;
+    font-weight: lighter;
+    margin-top: 6vh;
+}
+
+.firsthead,
+.taskhead {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+.firsthead-sub,
+.taskheadsub {
+    font-weight: lighter;
+}
+
+/* Input Container Styles */
+.input-container {
+    margin-right: 100px;
+    /* Add margin on the right side */
+}
+
+/* Input Styles */
+.user-input {
+    width: calc(100% - 50px);
+    border: 0.5px solid black;
+    border-radius: 10px;
+    padding: 20px 0px 20px 20px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+}
+
+/* Input Placeholder Styles */
+.user-input::placeholder {
+    color: #666;
+    font-size: 20px;
+}
+
+/* Button Styles */
+.button,
+.save {
+    color: white;
+    background-color: #4c63b6;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.button:hover,
+.save:hover {
+    background-color: #4056a1;
+    /* Darken color on hover */
+}
+
+.mainhead,
+.firsthead,
+.user-input,
+.button,
+.taskhead,
+.save {
+    margin-left: 50px;
+}
+
+/* New styles for the fade-in animation */
+.todo-item-container {
+    animation: fadeIn 0.5s ease-in-out;
+    margin-bottom: 10px;
+    list-style-type: none;
+    /* Add margin between task items */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* New class for task container */
+.task-box {
+    flex: 1;
+    /* Allow the task box to occupy remaining space */
+    margin-left: 0px;
+    /* Adjust margin for better spacing */
+    display: flex;
+    /* Ensure items are displayed as flex to enable alignment */
+    justify-content: flex-start;
+    /* Align task box to the left */
+    background-color: #a0d7de;
+    /* Background color of the task box */
+    border: 2px solid #333;
+    /* Border of the task box */
+    border-radius: 10px;
+    /* Border radius of the task box */
+    transition: background-color 0.3s;
+    /* Smooth transition for hover effect */
+    padding: 15px 0px 15px 20px;
+    /* Padding within the task box */
+}
+
+/* .task-box:hover {
+    background-color: #e0e0e0;
+    /* Background color of the task box on hover 
+} */
+
+.task-name {
+    font-size: 20px;
+    /* Adjust font size */
+    margin-right: 10px;
+    /* Add space on the right side */
+    font-weight: 700;
+}
+
+.label-container {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.checkbox-input {
+    width: 20px;
+    /* Adjust width to match the height of the task name box */
+    height: 20px;
+    /* Adjust height to match the height of the task name box */
+    margin-right: 10px;
+    /* Adjust margin for better spacing */
+    /* Hide the default checkbox appearance */
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    /* Remove default checkbox styles */
+    border: none;
+    outline: none;
+    /* Add custom checkbox style */
+    border: 2px solid #333;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.checkbox-input:checked {
+    /* Adjust styles for checked state */
+    background-color: #4c63b6;
+    /* Change background color */
+    border-color: #4c63b6;
+    /* Change border color */
+    outline: none;
+    /* Remove outline */
+}
+
+.delete-icon {
+    cursor: pointer;
+    margin-left: 10px;
+    /* Adjust margin for spacing */
+    font-size: 30px;
+    /* Set the font size to make the icon bigger */
+}
+
+
+/* For screens smaller than 768px (typical smartphones) */
+@media only screen and (max-width: 768px) {
+    .mainhead {
+        font-size: 5vh;
+        /* Adjust the font size for smaller screens */
+        margin-top: 3vh;
+        /* Adjust the margin for smaller screens */
+    }
+
+    .firsthead,
+    .taskhead {
+        font-size: 4vh;
+        /* Adjust the font size for smaller screens */
+    }
+
+    .user-input {
+        font-size: 16px;
+        /* Adjust input font size for smaller screens */
+    }
+
+    .button,
+    .save {
+        font-size: 16px;
+        /* Adjust button font size for smaller screens */
+        padding: 8px 16px;
+        /* Adjust button padding for smaller screens */
+    }
+}
