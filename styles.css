@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Ojuju:wght@200..800&family=Quicksand:wght@300..700&display=swap');
 
-/* General Styles */
 .backgroundcontainer {
     background-color: white;
     padding: 20px;
@@ -9,7 +8,6 @@
     margin-right: 300px;
 }
 
-/* Headings */
 .mainhead {
     text-align: center;
     font-family: "Madimi One", sans-serif;
@@ -31,13 +29,10 @@
     font-weight: lighter;
 }
 
-/* Input Container Styles */
 .input-container {
     margin-right: 100px;
-    /* Add margin on the right side */
 }
 
-/* Input Styles */
 .user-input {
     width: calc(100% - 50px);
     border: 0.5px solid black;
@@ -49,7 +44,6 @@
     font-family: "Quicksand", sans-serif;
 }
 
-/* Input Placeholder Styles */
 .user-input::placeholder {
     color: #666;
     font-size: 20px;
@@ -57,7 +51,6 @@
 
 
 
-/* Button Styles */
 .button,
 .save {
     color: white;
@@ -75,7 +68,6 @@
 .button:hover,
 .save:hover {
     background-color: #4056a1;
-    /* Darken color on hover */
 }
 
 .mainhead,
@@ -87,12 +79,10 @@
     margin-left: 50px;
 }
 
-/* New styles for the fade-in animation */
 .todo-item-container {
     animation: fadeIn 0.5s ease-in-out;
     margin-bottom: 10px;
     list-style-type: none;
-    /* Add margin between task items */
 }
 
 @keyframes fadeIn {
@@ -107,39 +97,23 @@
     }
 }
 
-/* New class for task container */
 .task-box {
     flex: 1;
-    /* Allow the task box to occupy remaining space */
     margin-left: 0px;
-    /* Adjust margin for better spacing */
     display: flex;
-    /* Ensure items are displayed as flex to enable alignment */
     justify-content: flex-start;
-    /* Align task box to the left */
     background-color: #e1e1e1;
-    /* Background color of the task box */
     border: 2px solid #333;
-    /* Border of the task box */
     border-radius: 10px;
-    /* Border radius of the task box */
     transition: background-color 0.3s;
-    /* Smooth transition for hover effect */
     padding: 15px 0px 15px 20px;
-    /* Padding within the task box */
     font-family: "Quicksand", sans-serif;
 }
 
-/* .task-box:hover {
-    background-color: #e0e0e0;
-    /* Background color of the task box on hover 
-} */
 
 .task-name {
     font-size: 20px;
-    /* Adjust font size */
     margin-right: 10px;
-    /* Add space on the right side */
     font-weight: 700;
 }
 
@@ -151,19 +125,13 @@
 
 .checkbox-input {
     width: 20px;
-    /* Adjust width to match the height of the task name box */
     height: 20px;
-    /* Adjust height to match the height of the task name box */
     margin-right: 10px;
-    /* Adjust margin for better spacing */
-    /* Hide the default checkbox appearance */
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    /* Remove default checkbox styles */
     border: none;
     outline: none;
-    /* Add custom checkbox style */
     border: 2px solid #333;
     border-radius: 4px;
     background-color: #fff;
@@ -171,38 +139,25 @@
 }
 
 .checkbox-input:checked {
-    /* Adjust styles for checked state */
     background-color: #4c63b6;
-    /* Change background color */
     border-color: #4c63b6;
-    /* Change border color */
     outline: none;
-    /* Remove outline */
 }
 
 .delete-icon {
     cursor: pointer;
     margin-left: 10px;
-    /* Adjust margin for spacing */
     font-size: 30px;
-    /* Set the font size to make the icon bigger */
 }
 
-
-/* For screens smaller than 768px (typical smartphones) */
-/* For screens smaller than 768px (typical smartphones) */
-/* For screens smaller than 768px (typical smartphones) */
 @media only screen and (max-width: 768px) {
     .backgroundcontainer {
         padding: 10px;
-        /* Adjust padding for better spacing on mobile */
     }
 
     .container {
         max-width: 100%;
-        /* Ensure container occupies full width on mobile */
         padding: 10px;
-        /* Adjust padding for better spacing on mobile */
     }
 
     .mainhead {
@@ -215,52 +170,39 @@
     .firsthead,
     .taskhead {
         font-size: 4vh;
-        /* Decrease font size for subheadings */
     }
 
     .user-input {
         font-size: 16px;
-        /* Adjust input font size for better readability */
         width: calc(100% - 20px);
-        /* Adjust input width for better fit */
         padding: 10px;
-        /* Adjust input padding for better touch interaction */
     }
 
     .button,
     .save {
         font-size: 14px;
-        /* Decrease button font size for mobile */
         padding: 10px 16px;
-        /* Adjust button padding for better touch interaction */
     }
 
     .task-box {
         padding: 10px;
-        /* Adjust padding for task boxes on mobile */
     }
 
     .task-name {
         font-size: 18px;
-        /* Adjust task name font size for better readability */
         margin-right: 5px;
-        /* Adjust margin for task names */
     }
 
     .delete-icon {
         font-size: 24px;
-        /* Increase delete icon size for better visibility */
         margin-left: 5px;
-        /* Adjust margin for delete icons */
     }
 }
 
-/* Add styling for the delete selected button */
 .delete-selected-button {
     font-size: 14px;
     padding: 10px 16px;
     background-color: #ff5252;
-    /* Red color for delete button */
     color: white;
     border: none;
     border-radius: 4px;
@@ -270,5 +212,4 @@
 
 .delete-selected-button:hover {
     background-color: #ff1744;
-    /* Darker red color on hover */
 }

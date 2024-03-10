@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let todoItemsContainer = document.querySelector(".task-container");
     let addTodoButton = document.querySelector(".button");
     let saveTodoButton = document.querySelector(".save");
-    let deleteSelectedButton = document.querySelector("#deleteSelectedButton"); // Add delete selected button
 
     function getTodoListFromLocalStorage() {
         let stringifiedTodoList = localStorage.getItem("todoList");
@@ -16,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let todoList = getTodoListFromLocalStorage();
     let todosCount = todoList.length;
-    let selectedTasks = []; // Array to store selected task IDs
+    let selectedTasks = []; 
 
     saveTodoButton.onclick = function () {
         localStorage.setItem("todoList", JSON.stringify(todoList));
@@ -66,10 +65,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (todoObject.isChecked === true) {
             todoObject.isChecked = false;
-            selectedTasks = selectedTasks.filter(taskId => taskId !== todoId); // Remove task from selectedTasks if unchecked
+            selectedTasks = selectedTasks.filter(taskId => taskId !== todoId); 
         } else {
             todoObject.isChecked = true;
-            selectedTasks.push(todoId); // Add task to selectedTasks if checked
+            selectedTasks.push(todoId); 
         }
     }
 
@@ -87,8 +86,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         todoList.splice(deleteElementIndex, 1);
-
-        // Remove deleted task from selectedTasks
         selectedTasks = selectedTasks.filter(taskId => taskId !== todoId);
     }
 
@@ -113,9 +110,9 @@ document.addEventListener('DOMContentLoaded', function () {
         inputElement.classList.add("checkbox-input");
         labelContainer.appendChild(inputElement);
 
-        let taskBox = document.createElement("div"); // Creating task box
-        taskBox.classList.add("task-box"); // Adding task box class
-        labelContainer.appendChild(taskBox); // Appending task box to label container
+        let taskBox = document.createElement("div"); 
+        taskBox.classList.add("task-box"); 
+        labelContainer.appendChild(taskBox);
 
         let labelElement = document.createElement("div");
         labelElement.setAttribute("for", checkboxId);
@@ -125,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (todo.isChecked === true) {
             labelElement.classList.add("checked");
         }
-        taskBox.appendChild(labelElement); // Appending task name to task box
+        taskBox.appendChild(labelElement); 
 
         let deleteIconContainer = document.createElement("div");
         deleteIconContainer.classList.add("delete-icon-container");
@@ -145,12 +142,11 @@ document.addEventListener('DOMContentLoaded', function () {
         createAndAppendTodo(todo);
     }
 
-    // Function to delete all selected tasks
     deleteSelectedButton.onclick = function () {
         for (let taskId of selectedTasks) {
             onDeleteTodo(taskId);
         }
-        selectedTasks = []; // Clear the selected tasks array after deletion
+        selectedTasks = []; 
     };
 });
 
